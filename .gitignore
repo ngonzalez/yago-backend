@@ -1,0 +1,9 @@
+.DS_Store
+tmp/cache/
+log/*.log
+.bundle
+dragonfly
+public
+gcp.json
+.env
+tmp/pids/server.pid
