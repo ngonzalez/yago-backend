@@ -33,7 +33,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_05_081233) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "nacebel_codes", force: :cascade do |t|
+  create_table "nace_bel_codes", force: :cascade do |t|
     t.integer "level", null: false
     t.string "code"
     t.string "parent_code"

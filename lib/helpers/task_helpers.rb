@@ -1,7 +1,7 @@
 require 'csv'
 module TaskHelpers
   def clear_nacebel_codes
-    NacebelCode.delete_all
+    NaceBelCode.delete_all
   end
   def import_nacebel_codes
     file = File.open("lib/csv/NACEBEL_2008.csv")
@@ -10,7 +10,7 @@ module TaskHelpers
       items << row.to_h
     end
     items.each do |item|
-      NacebelCode.create!(
+      NaceBelCode.create!(
         code: item[NACEBEL_CSV_HEADERS[:code]],
         level: item[NACEBEL_CSV_HEADERS[:level]],
         parent_code: item[NACEBEL_CSV_HEADERS[:parent_code]],

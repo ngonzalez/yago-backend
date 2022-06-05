@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: nacebel_codes
+# Table name: nace_bel_codes
 #
 #  id          :bigint           not null, primary key
 #  code        :string
@@ -17,6 +17,6 @@
 #
 #  index_nacebel_codes_on_code  (code)
 #
-class NacebelCode < ActiveRecord::Base
+class NaceBelCode < ActiveRecord::Base
   validates_presence_of :level
 end
