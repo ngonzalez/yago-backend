@@ -58,3 +58,5 @@ if ENV['REDIS_DB'].present?
 else
   raise "Missing ENV REDIS_DB"
 end
+
+NACEBEL_CSV_HEADERS = YAML.load_file File.expand_path('../config/yaml/nacebel_csv_headers.yaml', __dir__)

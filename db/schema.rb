@@ -35,9 +35,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_05_081233) do
 
   create_table "nacebel_codes", force: :cascade do |t|
     t.integer "level", null: false
-    t.string "code", null: false
-    t.string "parent_code", null: false
-    t.string "label", null: false
+    t.string "code"
+    t.string "parent_code"
+    t.string "label_en"
+    t.string "label_de"
+    t.string "label_nl"
+    t.string "label_fr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["code"], name: "index_nacebel_codes_on_code"
