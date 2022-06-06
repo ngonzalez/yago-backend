@@ -6,6 +6,8 @@
 #  available        :boolean          default(TRUE), not null
 #  coverage_ceiling :integer          not null
 #  deductible       :integer          not null
+#  deleted_at       :datetime
+#  gross_premiums   :jsonb            not null
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #  company_id       :integer          not null

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_05_081233) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_05_081230) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,14 +21,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_05_081233) do
     t.boolean "natural_person", default: true, null: false
     t.jsonb "nace_bel_codes"
     t.datetime "deleted_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "covers", force: :cascade do |t|
-    t.integer "quote_id", null: false
-    t.string "name", null: false
-    t.integer "amount", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -53,6 +45,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_05_081233) do
     t.integer "coverage_ceiling", null: false
     t.integer "deductible", null: false
     t.string "remote_quote_id", null: false
+    t.jsonb "gross_premiums", null: false
+    t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
