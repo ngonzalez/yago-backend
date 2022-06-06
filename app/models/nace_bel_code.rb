@@ -15,7 +15,8 @@
 #
 # Indexes
 #
-#  index_nacebel_codes_on_code  (code)
+#  index_nacebel_codes_on_code         (code)
+#  index_nacebel_codes_on_parent_code  (parent_code)
 #
 class NaceBelCode < ActiveRecord::Base
   validates_presence_of :level

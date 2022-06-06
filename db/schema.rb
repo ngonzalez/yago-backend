@@ -19,7 +19,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_05_081233) do
     t.integer "annual_revenue", null: false
     t.string "legal_name", null: false
     t.boolean "natural_person", default: true, null: false
-    t.jsonb "nacebel_codes"
+    t.jsonb "nace_bel_codes"
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -44,6 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_05_081233) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["code"], name: "index_nacebel_codes_on_code"
+    t.index ["parent_code"], name: "index_nacebel_codes_on_parent_code"
   end
 
   create_table "quotes", force: :cascade do |t|
@@ -54,6 +55,17 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_05_081233) do
     t.string "remote_quote_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "versions", force: :cascade do |t|
+    t.string "item_type", null: false
+    t.integer "item_id", null: false
+    t.string "event", null: false
+    t.string "whodunnit"
+    t.text "object"
+    t.datetime "created_at"
+    t.text "object_changes"
+    t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id"
   end
 
 end

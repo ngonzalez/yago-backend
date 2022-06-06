@@ -1,9 +1,9 @@
 require 'csv'
 module TaskHelpers
-  def clear_nacebel_codes
+  def clear_nace_bel_codes
     NaceBelCode.delete_all
   end
-  def import_nacebel_codes
+  def import_nace_bel_codes
     file = File.open("lib/csv/NACEBEL_2008.csv")
     items = []
     CSV.foreach(file.path, :headers => true, :col_sep => ';', :encoding => 'ISO-8859-1') do |row|

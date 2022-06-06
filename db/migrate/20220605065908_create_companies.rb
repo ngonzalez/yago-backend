@@ -5,7 +5,7 @@ class CreateCompanies < ActiveRecord::Migration[7.0]
       t.integer :annual_revenue, null: false, unique: true
       t.string :legal_name, null: false, unique: true
       t.boolean :natural_person, null: false, unique: true, default: true
-      t.jsonb :nacebel_codes
+      t.jsonb :nace_bel_codes
       t.datetime :deleted_at
       t.timestamps
     end
