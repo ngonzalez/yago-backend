@@ -8,7 +8,7 @@ module Types
     field :available, Boolean, null: false
     field :coverage_ceiling, Integer, null: false
     field :deductible, Integer, null: false
-    field :remote_quote_id, String, null: false
+    field :quote_id, String, null: false
     field :gross_premiums, GraphQL::Types::JSON, null: false
   end
 end

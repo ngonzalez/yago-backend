@@ -11,7 +11,7 @@
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #  company_id       :integer          not null
-#  remote_quote_id  :string           not null
+#  quote_id         :string           not null
 #
 class Quote < ActiveRecord::Base
   belongs_to :company, class_name: "Company", foreign_key: :company_id

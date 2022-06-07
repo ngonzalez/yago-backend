@@ -44,7 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_05_081230) do
     t.boolean "available", default: true, null: false
     t.integer "coverage_ceiling", null: false
     t.integer "deductible", null: false
-    t.string "remote_quote_id", null: false
+    t.string "quote_id", null: false
     t.jsonb "gross_premiums", null: false
     t.datetime "deleted_at"
     t.datetime "created_at", null: false

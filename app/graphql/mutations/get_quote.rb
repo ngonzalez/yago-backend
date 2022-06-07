@@ -7,7 +7,7 @@ module Mutations
     field :quote, Types::Quote, null: false
 
     def resolve(args)
-      quote = Quote.find_by(remote_quote_id: args[:quote_id])
+      quote = Quote.find_by(quote_id: args[:quote_id])
 
       MutationResult.call(
         obj: { quote: quote },

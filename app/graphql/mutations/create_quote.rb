@@ -18,7 +18,7 @@ module Mutations
         available: args[:available],
         coverage_ceiling: args[:coverage_ceiling],
         deductible: args[:deductible],
-        remote_quote_id: args[:quote_id],
+        quote_id: args[:quote_id],
         gross_premiums: args[:gross_premiums],
       )
 
