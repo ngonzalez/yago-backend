@@ -240,6 +240,9 @@ GEM
     request_store (1.5.1)
       rack (>= 1.4)
     rouge (3.29.0)
+    rspec-json_expectations (2.2.0)
+    shoulda-matchers (5.1.0)
+      activesupport (>= 5.2.0)
     strscan (3.0.3)
     thor (1.2.1)
     timeout (0.3.0)
@@ -273,9 +276,11 @@ DEPENDENCIES
   redis-rack-cache
   rspec-core!
   rspec-expectations!
+  rspec-json_expectations
   rspec-mocks!
   rspec-rails!
   rspec-support!
+  shoulda-matchers
   tzinfo-data
 
 RUBY VERSION

@@ -23,5 +23,8 @@ Edit `.env` file
 * Database initialization
 `bundle exec rails db:migrate`
 
+* Import NACE-BEL codes
+`bundle exec rake data:import_nace_bel_codes`
+
 * How to run the test suite
-`bundle exec rspec`
+`bundle exec rspec spec/requests/graphql/mutations/*`

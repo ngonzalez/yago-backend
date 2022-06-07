@@ -1,0 +1,12 @@
+example_id                                                   | status | run_time        |
+------------------------------------------------------------ | ------ | --------------- |
+./spec/requests/graphql/mutations/create_company.rb[1:1]     | passed | 0.01992 seconds |
+./spec/requests/graphql/mutations/create_company.rb[1:2]     | passed | 0.01868 seconds |
+./spec/requests/graphql/mutations/create_quote.rb[1:1]       | passed | 0.03301 seconds |
+./spec/requests/graphql/mutations/create_quote.rb[1:2]       | passed | 0.03713 seconds |
+./spec/requests/graphql/mutations/get_company.rb[1:1]        | passed | 0.02168 seconds |
+./spec/requests/graphql/mutations/get_company.rb[1:2]        | passed | 0.02161 seconds |
+./spec/requests/graphql/mutations/get_nace_bel_codes.rb[1:1] | passed | 0.01156 seconds |
+./spec/requests/graphql/mutations/get_nace_bel_codes.rb[1:2] | passed | 0.01799 seconds |
+./spec/requests/graphql/mutations/get_quote.rb[1:1]          | passed | 0.36394 seconds |
+./spec/requests/graphql/mutations/get_quote.rb[1:2]          | passed | 0.02672 seconds |

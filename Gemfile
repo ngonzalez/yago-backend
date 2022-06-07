@@ -53,7 +53,10 @@ end
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "pry"
+end
 
+
+group :test do
   # faker
   gem "faker"
 
@@ -64,4 +67,8 @@ group :development, :test do
   %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
     gem lib, git: "https://github.com/rspec/#{lib}.git", branch: "main"
   end
+
+  # rspec helpers
+  gem "rspec-json_expectations"
+  gem "shoulda-matchers"
 end
