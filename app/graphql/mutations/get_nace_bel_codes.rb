@@ -13,7 +13,7 @@ module Mutations
       else
         nace_bel_codes = NaceBelCode.where(level: args[:level], parent_code: args[:parent_code]).all
       end
-
+      
       MutationResult.call(
         obj: { nace_bel_codes: nace_bel_codes },
         success: true,

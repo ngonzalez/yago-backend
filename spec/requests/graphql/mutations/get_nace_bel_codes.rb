@@ -4,7 +4,6 @@ RSpec.describe "Get NACE-BEL codes" do
   subject(:request) {
     post "/graphql", headers: { 'Content-Type' => 'application/json' }, params: { query: query, variables: variables }.to_json
   }
-  let(:nace_bel_codes) { create_list(:nace_bel_code, 10) }
   let(:query) do
     <<~GRAPHQL
     mutation getNaceBelCodes(
