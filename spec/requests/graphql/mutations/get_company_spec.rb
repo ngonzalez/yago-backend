@@ -4,7 +4,7 @@ RSpec.describe "Get company" do
   subject(:request) {
     post "/graphql", headers: { 'Content-Type' => 'application/json' }, params: { query: query, variables: variables }.to_json
   }
-  let(:company) { create(:company) }
+  let(:company) { FactoryBot.create(:company) }
   let(:query) do
     <<~GRAPHQL
     mutation getCompany(

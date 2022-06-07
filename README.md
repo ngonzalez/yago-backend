@@ -12,9 +12,10 @@
 bundle install
 ```
 
-* Database creation
 Edit `.env` file
 `cp .env.sample .env`
+
+* Database creation
 ```bash
 bundle exec rails db:create
 ```
@@ -31,6 +32,5 @@ bundle exec rake data:import_nace_bel_codes
 
 * How to run the test suite
 ```bash
-bundle exec rspec spec/graphql/mutations/*
-bundle exec rspec spec/requests/graphql/mutations/*
+bundle exec rspec
 ```

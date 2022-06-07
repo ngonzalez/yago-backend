@@ -4,8 +4,8 @@ RSpec.describe "Get quote" do
   subject(:request) {
     post "/graphql", headers: { 'Content-Type' => 'application/json' }, params: { query: query, variables: variables }.to_json
   }
-  let(:company) { create(:company) }
-  let(:quote) { create(:quote, company: company) }
+  let(:company) { FactoryBot.create(:company) }
+  let(:quote) { FactoryBot.create(:quote, company: company) }
   let(:query) do
     <<~GRAPHQL
     mutation getQuote(
