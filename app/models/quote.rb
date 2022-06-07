@@ -16,8 +16,6 @@
 class Quote < ActiveRecord::Base
   belongs_to :company, class_name: "Company", foreign_key: :company_id
 
-  has_many :covers, class_name: "Cover", dependent: :destroy, foreign_key: :quote_id
-
   has_paper_trail
 
   acts_as_paranoid
