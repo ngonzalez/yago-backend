@@ -13,7 +13,7 @@
 #  updated_at        :datetime         not null
 #
 class Company < ActiveRecord::Base
-  has_many :quotes, class_name: "Quote", dependent: :destroy, foreign_key: :company_id
+  has_many :quotes
   
   validates :enterprise_number, length: { is: 10 }
 

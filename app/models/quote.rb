@@ -14,7 +14,7 @@
 #  quote_id         :string           not null
 #
 class Quote < ActiveRecord::Base
-  belongs_to :company, class_name: "Company", foreign_key: :company_id
+  belongs_to :company
 
   has_paper_trail
 
