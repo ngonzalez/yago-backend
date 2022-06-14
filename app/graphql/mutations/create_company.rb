@@ -11,7 +11,7 @@ module Mutations
     field :company, Types::Company, null: false
 
     def resolve(args)
-      company = Company.create!(
+      company = Company.create(
         annual_revenue: args[:annual_revenue],
         enterprise_number: args[:enterprise_number],
         legal_name: args[:legal_name],
@@ -22,7 +22,7 @@ module Mutations
       MutationResult.call(
         obj: { company: company },
         success: company.persisted?,
-        errors: [],
+        errors: company.errors.full_messages,
       )
     end
   end

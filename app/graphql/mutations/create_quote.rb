@@ -14,7 +14,7 @@ module Mutations
     def resolve(args)
       company = Company.find(args[:company_id])
 
-      quote = company.quotes.create!(
+      quote = company.quotes.create(
         available: args[:available],
         coverage_ceiling: args[:coverage_ceiling],
         deductible: args[:deductible],
@@ -25,7 +25,7 @@ module Mutations
       MutationResult.call(
         obj: { quote: quote },
         success: quote.persisted?,
-        errors: [],
+        errors: quote.errors.full_messages,
       )
     end
   end
